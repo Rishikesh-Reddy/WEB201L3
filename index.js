@@ -28,7 +28,7 @@ const todoList = () => {
       // Format the To-Do list here, and return the output string as per the format given above.
       output = ""
       for (let i = 0; i < list.length; i++) {
-        output += `[${list[i].completed ? "x" : " "}] ${list[i].title} ${list[i].dueDate}\n`
+        output += `[${list[i].completed ? "x" : " "}] ${list[i].title} ${list[i].dueDate == formattedDate(new Date()) ? "" : list[i].dueDate}${i < list.length - 1 ? "\n" : ""}`
       }
       return output
     }
